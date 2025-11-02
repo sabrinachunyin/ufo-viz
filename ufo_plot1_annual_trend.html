@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "layer": [{"mark": {"type": "area", "opacity": 0.35}, "encoding": {"tooltip": [{"field": "year", "type": "ordinal"}, {"field": "reports", "type": "quantitative"}], "x": {"field": "year", "title": "Year", "type": "ordinal"}, "y": {"field": "reports", "title": "Number of Reports", "type": "quantitative"}}}, {"mark": {"type": "line"}, "encoding": {"x": {"field": "year", "type": "ordinal"}, "y": {"field": "reports", "type": "quantitative"}}}], "data": {"name": "data-f6deb08ff3b58fb66a976c8c6dfe4f49"}, "height": 350, "title": "UFO Reports per Year (United States)", "width": 700, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-f6deb08ff3b58fb66a976c8c6dfe4f49": [{"year": 1910, "reports": 2}, {"year": 1920, "reports": 1}, {"year": 1925, "reports": 1}, {"year": 1929, "reports": 1}, {"year": 1931, "reports": 2}, {"year": 1934, "reports": 1}, {"year": 1936, "reports": 1}, {"year": 1937, "reports": 2}, {"year": 1939, "reports": 3}, {"year": 1941, "reports": 1}, {"year": 1942, "reports": 2}, {"year": 1943, "reports": 1}, {"year": 1944, "reports": 3}, {"year": 1945, "reports": 7}, {"year": 1946, "reports": 8}, {"year": 1947, "reports": 33}, {"year": 1948, "reports": 7}, {"year": 1949, "reports": 15}, {"year": 1950, "reports": 21}, {"year": 1951, "reports": 13}, {"year": 1952, "reports": 37}, {"year": 1953, "reports": 26}, {"year": 1954, "reports": 38}, {"year": 1955, "reports": 25}, {"year": 1956, "reports": 39}, {"year": 1957, "reports": 62}, {"year": 1958, "reports": 42}, {"year": 1959, "reports": 43}, {"year": 1960, "reports": 51}, {"year": 1961, "reports": 41}, {"year": 1962, "reports": 56}, {"year": 1963, "reports": 68}, {"year": 1964, "reports": 78}, {"year": 1965, "reports": 164}, {"year": 1966, "reports": 160}, {"year": 1967, "reports": 147}, {"year": 1968, "reports": 175}, {"year": 1969, "reports": 120}, {"year": 1970, "reports": 109}, {"year": 1971, "reports": 97}, {"year": 1972, "reports": 119}, {"year": 1973, "reports": 188}, {"year": 1974, "reports": 219}, {"year": 1975, "reports": 247}, {"year": 1976, "reports": 222}, {"year": 1977, "reports": 206}, {"year": 1978, "reports": 258}, {"year": 1979, "reports": 191}, {"year": 1980, "reports": 194}, {"year": 1981, "reports": 133}, {"year": 1982, "reports": 134}, {"year": 1983, "reports": 122}, {"year": 1984, "reports": 144}, {"year": 1985, "reports": 171}, {"year": 1986, "reports": 153}, {"year": 1987, "reports": 176}, {"year": 1988, "reports": 188}, {"year": 1989, "reports": 200}, {"year": 1990, "reports": 191}, {"year": 1991, "reports": 180}, {"year": 1992, "reports": 183}, {"year": 1993, "reports": 228}, {"year": 1994, "reports": 324}, {"year": 1995, "reports": 915}, {"year": 1996, "reports": 646}, {"year": 1997, "reports": 1009}, {"year": 1998, "reports": 1404}, {"year": 1999, "reports": 2253}, {"year": 2000, "reports": 2184}, {"year": 2001, "reports": 2445}, {"year": 2002, "reports": 2439}, {"year": 2003, "reports": 2958}, {"year": 2004, "reports": 3244}, {"year": 2005, "reports": 3228}, {"year": 2006, "reports": 2884}, {"year": 2007, "reports": 3470}, {"year": 2008, "reports": 4017}, {"year": 2009, "reports": 3677}, {"year": 2010, "reports": 3548}, {"year": 2011, "reports": 4379}, {"year": 2012, "reports": 6320}, {"year": 2013, "reports": 6056}, {"year": 2014, "reports": 1964}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

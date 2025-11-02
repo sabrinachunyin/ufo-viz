@@ -1,0 +1,38 @@
+---
+layout: page
+title: "UFO Visualizations — Altair + Vega-Lite"
+permalink: /ufo-viz/
+---
+
+<div style="margin-bottom:1rem;">
+  <a class="btn" href="https://github.com/UIUC-iSchool-DataViz/is445_data/raw/main/ufo-scrubbed-geocoded-time-standardized-00.csv" target="_blank">The Data</a>
+  <!-- Replace USERNAME and REPO if needed -->
+  <a class="btn" href="https://github.com/USERNAME/REPO/blob/main/ufo_altair_assignment.ipynb" target="_blank">The Analysis</a>
+</div>
+
+## Plot 1 — Annual Trend (U.S.)
+
+**What**: Annual counts of UFO reports in the United States.  
+**Encodings**: x = year (temporal), y = count (quantitative).  
+**Color**: none (focus on trend).  
+**Transformations**: parse `date_time` to timestamps, filter to U.S., group by year.  
+
+<iframe src="/charts/ufo_plot1_annual_trend.html" width="100%" height="420" style="border:0;"></iframe>
+
+---
+
+## Plot 2 — Interactive Scatter by Year & Shape (U.S.)
+
+**What**: Latitude/longitude positions of UFO sightings in the United States. Circle size encodes (capped) duration and color encodes shape.  
+**Encodings**: x = longitude, y = latitude, size = duration, color = shape.  
+**Transformations**: parse timestamps, filter to U.S., cap extreme durations.  
+**Interactivity**: Year slider to focus on a single year; click legend to highlight shapes; hover for details. This reduces clutter and supports temporal comparison.
+
+<iframe src="/charts/ufo_plot2_interactive_scatter.html" width="100%" height="480" style="border:0;"></iframe>
+
+---
+
+### Notes
+- Make sure you upload the two HTML files into a `/charts/` folder at the root of your GitHub Pages (or adjust the `<iframe>` paths accordingly).
+- Update the **The Analysis** link to point to your notebook on GitHub (so GitHub renders it online).
+
