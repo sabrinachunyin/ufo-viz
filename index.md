@@ -17,7 +17,7 @@ permalink: /ufo-viz/
 **Color**: none (focus on trend).  
 **Transformations**: parse `date_time` to timestamps, filter to U.S., group by year.  
 
-<iframe src="/charts/ufo_plot1_annual_trend.html" width="100%" height="420" style="border:0;"></iframe>
+<iframe src="charts/ufo_plot1_annual_trend.html" width="100%" height="420" style="border:0;"></iframe>
 
 ---
 
@@ -28,5 +28,5 @@ permalink: /ufo-viz/
 **Transformations**: parse timestamps, filter to U.S., cap extreme durations.  
 **Interactivity**: Year slider to focus on a single year; click legend to highlight shapes; hover for details. This reduces clutter and supports temporal comparison.
 
-<iframe src="/charts/ufo_plot2_interactive_scatter.html" width="100%" height="480" style="border:0;"></iframe>
+<iframe src="charts/ufo_plot2_interactive_scatter.html" width="100%" height="480" style="border:0;"></iframe>
 
