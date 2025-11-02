@@ -1,17 +1,46 @@
----
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>UFO Visualizations — Altair + Vega-Lite</title>
-  </head>
-  <body>
-    <h1>Plot 1 — Annual Trend (U.S.)</h1>
-    <p>Annual counts of UFO reports in the United States.</p>
-    <iframe src="ufo_plot1_annual_trend.html" width="100%" height="420" style="border:0;"></iframe>
+<head>
+  <meta charset="UTF-8">
+  <title>UFO Visualizations — Altair + Vega-Lite</title>
+</head>
+<body>
+  <h1>UFO Visualizations — Altair + Vega-Lite</h1>
 
-    <h1>Plot 2 — Interactive Scatter by Year & Shape (U.S.)</h1>
-    <p>Interactive map of UFO sightings by year and shape.</p>
-    <iframe src="ufo_plot2_interactive_scatter.html" width="100%" height="480" style="border:0;"></iframe>
-  </body>
+  <p>
+    <a href="https://github.com/UIUC-iSchool-DataViz/is445_data/raw/main/ufo-scrubbed-geocoded-time-standardized.csv" target="_blank">
+      Download the UFO Dataset
+    </a>
+    &nbsp;|&nbsp;
+    <a href="https://github.com/sabrinachunyin/ufo-viz/blob/main/ufo_altair_assignment.ipynb" target="_blank">
+      View the Python Notebook
+    </a>
+  </p>
+
+  <hr>
+
+  <h2>Plot 1 — Annual Trend (U.S.)</h2>
+  <p><strong>What:</strong> Annual counts of UFO reports in the United States from the dataset.</p>
+  <p><strong>Encodings:</strong> The x-axis encodes <em>year</em> (temporal), and the y-axis encodes <em>count</em> (quantitative).</p>
+  <p><strong>Color Map:</strong> No color encoding is used here to focus purely on the trend over time.</p>
+  <p><strong>Transformations:</strong> The <code>date_time</code> field was parsed into timestamps and filtered to U.S. reports, then aggregated by year.</p>
+
+  <iframe src="ufo_plot1_annual_trend.html" width="100%" height="420" style="border:0;"></iframe>
+
+  <hr>
+
+  <h2>Plot 2 — Interactive Scatter by Year & Shape (U.S.)</h2>
+  <p><strong>What:</strong> Latitude and longitude positions of UFO sightings in the United States. Circle size represents duration, and color encodes the UFO shape.</p>
+  <p><strong>Encodings:</strong> x = longitude, y = latitude, size = duration (capped), color = shape.</p>
+  <p><strong>Color Map:</strong> Different UFO shapes are represented with distinct colors to help distinguish visual patterns.</p>
+  <p><strong>Transformations:</strong> The dataset was filtered to U.S. records, duration values were capped to avoid distortion, and timestamps were parsed.</p>
+  <p><strong>Interactivity:</strong> A year slider allows users to explore sightings across different years. Hover tooltips show details, helping users identify spatial-temporal patterns.</p>
+
+  <iframe src="ufo_plot2_interactive_scatter.html" width="100%" height="480" style="border:0;"></iframe>
+
+  <hr>
+  <footer>
+    <p>Created by <strong>Sabrina Chun-Yin</strong> | IS445 Data Visualization | University of Illinois Urbana-Champaign</p>
+  </footer>
+</body>
 </html>
