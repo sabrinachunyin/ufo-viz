@@ -30,9 +30,3 @@ permalink: /ufo-viz/
 
 <iframe src="/charts/ufo_plot2_interactive_scatter.html" width="100%" height="480" style="border:0;"></iframe>
 
----
-
-### Notes
-- Make sure you upload the two HTML files into a `/charts/` folder at the root of your GitHub Pages (or adjust the `<iframe>` paths accordingly).
-- Update the **The Analysis** link to point to your notebook on GitHub (so GitHub renders it online).
-
